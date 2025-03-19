@@ -1,0 +1,72 @@
+#include <iostream>
+
+using namespace std;
+
+
+/// Array :
+/*
+	normal Array :
+
+	// Type ArrayName [ArraySize] = { initialize };
+
+	int ArrayName[3] = {5, 4, 6};
+				index :	0  1  2
+	ArrayName[1] --> 4
+
+	// can change value
+	ArrayName[1] = 8;
+	ArrayName[1] --> 8
+	-------------------------------------------------------
+	// Type ArrayName [] = { initialize };
+
+	int ArrayName[] = {5, 4, 6};
+	// ArraySize automatically filled up but must be initialized
+-----------------------------------------------------------
+
+	Multidimensional array :
+
+	// Type ArrayName [ArraySize][ArraySize2][ArraySize3]... = { { { initialize } } };
+
+	int ArrayName[2][3] = { {1, 2, 3}, {4, 5, 6} };
+	OR
+	int ArrayName[2][3] = {
+							{1, 2, 3},
+							{4, 5, 6}
+						  };
+	ArrayName[1][2] --> 6
+	ArrayName[0][1] --> 2
+	// also we can change the value
+	-------------------------------------------------------
+
+	for(int i=0; i<2; i++)
+	{
+		for(int j=0; j<3; j++)
+		{
+			cout<<ArrayName[i][j]<<"   ";
+		}
+		cout<<"\n\n";
+	}
+*/
+
+int main()
+{
+	int ArrayName[2][3] = {
+							{1, 2, 3},
+							{4, 5, 6}
+						  };
+	for(int i=0; i<2; i++)
+	{
+		for(int j=0; j<3; j++)
+		{
+			if( (i==0 && j==2) || (i==1 && j==2) )
+				cout<<ArrayName[i][j];
+			else
+				cout<<ArrayName[i][j]<<",   ";
+		}
+		cout<<"\n\n";
+	}
+
+
+    return 0;
+}
+//MadMad_72
