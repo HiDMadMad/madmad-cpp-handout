@@ -1,6 +1,7 @@
 #include <iostream>  // cin & cout & ..
 #include <string>    // for strings in standard library
 //#include <string.h>  // for strings in old library
+#include <string_view>
 #include <cstdint>
 
 
@@ -57,21 +58,58 @@ int main()
         // escape sequances are characters ('\n', '\t', ...)
 
 
-    string        TString  = "8";        // 1bit per character
+    string        TString  = "8";        // 1bit per character  and  it creates copy  and  needs to include string
+    // const char[NumberOfCharacters];
+    // ***** avoid pass by value because it makes a copy each time *****
         // strings initialize :
-        string str1 = "no difference";
-        string str2 {"no difference"};
-        // strings accesses :
-        str1[2]; // --> " "
-        str1[4]; // --> "i"
-        str2[7]; // --> "e"
-        //str2[out of range] --> " "
-        str1[1] = 'x';
-        str2[3] = 'xo'; // --> o sits instead of d
+            std::string str1 = "no difference";
+            std::string str2 {"no difference"};
+            // strings accesses :
+            str1[2]; // --> " "
+            str1[4]; // --> "i"
+            str2[7]; // --> "e"
+            //str2[out of range] --> " "
+            str1[1] = 'x';
+            str2[3] = 'xo'; // --> o sits instead of d
+        // get string :
+            std::string name{};
+            std::string age{};
+            int agge{};
+            //std::cin>>name;  |--> logical error
+            //std::cin>>age;   |
+            std::getline(std::cin>>std::ws, name);
+            std::getline(std::cin>>std::ws, age);
+            //std::getline(std::cin>>std::ws, agge); --> syntax error
+            /*
+                If the name has two parts, cin takes the first part before the space. 
+                If the second variable is a string, it gets the rest; else if the second variable isn't string, 
+                cin isn’t cleared, and the next variable becomes 0.
+                So we can use std::get_line(std::cin>>std::ws, VariableName);  but it's just for strings
+                                                        |
+                                                        +--> this changes cin behavior(ignore spaces, \n, \t, ...)
+            */
+        // get size of string :
+            StringVariableName.length();
+            // std::ssize(StringVariableName);  2020 standard
+            // to save length :
+                //EX:
+                int length = static_cast<int>(StringVariableName);
     
+    
+    string_view   TStringV = " ";       // 1bit per character  and  this is read only  and  needs to include string_view
+    // ***** function's return type shouldn't be string_view *****
+        const string_view SV {"ConstStringView"};
+        constexpr string_view SVE {"ConstExpStringView"};
+        std::string S {"madmad"};
+        std::string_view SV2 {S};
+        void PrintS(std::string_view SV) {std::cout<<SV;} --> PrintS(S);  // static_cast string to string_view
+        static_cast<std::string>(SV2) // ststic_cast string_view to string
+
+
+
     int           TInt     = 32;        // 16bits to 32bits
-    int16_t       T16Int   = 16;        // 16bits                from -128 to 127
-    uint16_t      TU16Int  = 16;        // 16bits                from 0 to 255
+    int16_t       T16Int   = 16;        // 16bits                from -128 to 127   treated as char
+    uint16_t      TU16Int  = 16;        // 16bits                from 0 to 255      treated as char
     int_least16_t TL16Int  = 16;        // 16bits                حداقل 16 یا اگه سازگار نبود یکی بیشتر و ... , unsigend
     int_fast16_t  TF16Int  = 16;        // 16bits                بهینه ترین و اگه نشد یکی بالا تر , unsigned
     // ... and they are have constant size
@@ -117,8 +155,18 @@ int main()
 
 
     //const DataType VariableName;
-        const int age = 18; // can't be changed
+        const int age {18}; // can't be changed so it must be initialized
+        double const gravity {9.8} // this is correct too, but the above syntax is more accurate
+        const string name {"madmad"};
+        constexpr string_view name2 {"madmad"};
+        /*
+            const --> can be compile time constant(const int one = 1;) or run time constant(const int integer = GetInteger();)
+                      void five() {return 5} --> const int fivve = five(); --> it's run time constant
+            constexpr --> is compile time constant(constexpr two = 1+2 || ...)
 
+            So constexpr makes constants compile-time and full optimizes the program, but can cause errors if not set correctly.
+            But const doesn’t guarantee that value is compile-time constant; it can be runtime constant.
+        */
 
     // OverFlow :
         unsigned short int a = 65535;
@@ -136,13 +184,24 @@ int main()
 	        implicit : auto converts : like function get double but we get integer so compiler convert integer to double and use value
             
             explicit : manual converts : convert with static_cast<DataType>(VariableName OR VariableValue) syntaxt
-                float x = 2.2;
+                                         creates a completely new value
+                float x {2.2};
                 std::cout<<x<<'\n';
                 auto x2 = static_cast<int>(x);
                 std::cout<<x2;
 */
 
+    
+    // Literals :
+        std::cout<<3.8;  // --> 3.8 is double
+        std::cout<<3.8f; // Or 3.8F --> 3.8 is float
+        float f {8.3};   // --> 8.3 is double
+        float f {8.3F};   // Or 8.3f --> 8.3 is float
+        // D||d for double , F||f for float , L||l for long int , S||s for strings(" "s) , sv for string_views(""sv)
+        //                                                                 |                      |
+        //                           using namespace std::Literals;     <--+----------------------+
 
+        
     return 0;
 }
 //MadMad_

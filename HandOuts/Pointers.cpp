@@ -6,10 +6,10 @@ using namespace std;
 /// Memory Management :
 /*
 ----------------------------------------------------------------------------------------------------------------
-    Do Doi : 0, 1
-    Hasht Hashti : 0, 1, 2, 3, 4, 5, 6, 7
-    Dah Dahi : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-    Shanzdah Shanzdahi(Hexa) : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+    Do Doi (Binary) : 0, 1                                                             --> 0bNum -->11--> with bitset library
+    Hasht Hashti (Octal) : 0, 1, 2, 3, 4, 5, 6, 7                                      --> 0Num  -->11--> std::cout<<sdt::oct<<013
+    Dah Dahi (Decimal) : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9                                  --> Num   -->11--> std::cout<<sdt::dec<<11  or normal cout
+    Shanzdah Shanzdahi (HexaDecimal) : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F  --> 0xNum -->11--> std::cout<<sdt::hex<<0xB
 
     n : 0   1   2   3   4    5    6
         |   |   |   |   |    |    |    

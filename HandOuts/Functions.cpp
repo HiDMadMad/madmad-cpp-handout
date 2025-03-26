@@ -35,7 +35,7 @@ int Calculation(double x, double y, int z)
     // return pow((x+y), z);
 }
 
-void GetArray(double Array[], int ArraySize)
+void GetArray(double Array[], const int ArraySize)
 {
     /* to automatically get ArraySize :
         int ArraySize = sizeof(Array)/sizeof(Array[0])
