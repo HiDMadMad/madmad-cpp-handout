@@ -7,15 +7,15 @@ using namespace std;
 ///Operators :
 /*
     Operators Precedence(priority) :
+        ** from left to right and top to buttom have more priority **
         ()
-        +   -   ++  --  !                 --> + and - are one operand
+        ++  --  !  ~  +  -                 --> + and - are one operand
         *   /   %
         + -
-        <   >   <=  >=
+        <<  >>  <=>  <  <=  >  >=
         ==  !=
-        &&
-        ||
-        =   +=  -=  *=  /=  %=  &=  |=
+        &&  ^  ||
+        =   +=  -=  *=  /=  %=  &=  ^=  |=
         ,
 
     |=, &= are bitwise operators
