@@ -1,44 +1,38 @@
 #include <iostream>
 
-using namespace std;
-
 
 /// Loops :
+
+//--------------------------------------------------------------------------------------------------------------
 /*
-----------------------------------------------------
-
-    While: commands run while condition is true
-
-                              initializer;
-    while(condition)          while(condition)
-    {                   OR    {
-        Commands;                 Commands;
-    }                             initializer+=num
-                              }
-----------------------------------------------------
-
-    For: commands run while condition is true
-
-    for(initializer; condition; initializer+=num)
-    {
-        Commands;
-    }
-----------------------------------------------------
-
-    Do While: commands run at least once even condition is false
-
-    Do
-    {
-        Commands;
-    }while(condition);
-----------------------------------------------------
-
+    // While: commands run while condition is true
+                            ||    initializer;
+        while(condition)    ||    while(condition)
+        {                   OR    {
+            Commands;       ||        Commands;
+        }                   ||        initializer+=num
+                            ||    }
 */
+//--------------------------------------------------------------------------------------------------------------
 
-int main()
-{
+//--------------------------------------------------------------------------------------------------------------
+/*
+    //For: commands run while condition is true
+        for(initializer; condition; initializer+=num)
+        {
+            Commands;
+        }
+*/
+//--------------------------------------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------------------------------------------------
+/*
+    // Do While: commands run at least once even condition is false
+        Do
+        {
+            Commands;
+        }while(condition);
+*/
+//--------------------------------------------------------------------------------------------------------------
 
-    return 0;
-}
-//MadMad_44
+//MadMad_38

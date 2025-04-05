@@ -1,10 +1,10 @@
 #include <iostream>
 #include <math.h>
 
-using namespace std;
-
 
 /// Functions :
+
+//--------------------------------------------------------------------------------------------------------------
 /*
     // to create :
         ReturnType FunctionName(Parameters..)
@@ -26,7 +26,9 @@ using namespace std;
        in smaller steps and It must have a base case to stop recursion                  ***
        otherwise it will lead to infinite recursion and program crash
 */
+//--------------------------------------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------------------------------------------------
 int Calculation(double x, double y, int z)
 {
     int res = pow((x+y), z);
@@ -79,4 +81,6 @@ void DefinedBelow() // for use in runtime phase
 {
     cout<<"Defined Below.";
 }
-//MadMad_82
+//--------------------------------------------------------------------------------------------------------------
+
+//MadMad_86

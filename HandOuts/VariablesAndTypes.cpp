@@ -4,6 +4,7 @@
 #include <string_view>
 #include <cstdint>
 
+//--------------------------------------------------------------------------------------------------------------
 
 #define NL "\n"
 #define YAZDAH 11
@@ -11,6 +12,7 @@
 // cout<<YAZDAH<<NL<<MY_NAME;
 // have no effect on other files
 
+//--------------------------------------------------------------------------------------------------------------
 
 #ifdef MY_PASS
     cout<<"if MY_PASS defined with #define, so thats will run"; // even in main() or any function
@@ -26,17 +28,21 @@
     cout<<"never run" // even in main()
 #endif
 
+//--------------------------------------------------------------------------------------------------------------
 
 using namespace std;  //  no need to prefix with "std::" if library is in standard c++ libraries
 
+//--------------------------------------------------------------------------------------------------------------
 
 int main()
 {
     // https://cplusplus.com/doc/tutorial/variables/
 
+
     // data types :
     //              primitives : int, float, char, bool, void, null
     //              compound : string
+
 
     // signed DataType --> -∞ to +∞  --> -(2^n-1) to (2^n-1)-1    default: short, int, long, long long
     // unsigned DataType --> 0 to +∞ --> 0 to (2^n)-1
@@ -106,7 +112,6 @@ int main()
         static_cast<std::string>(SV2) // ststic_cast string_view to string
 
 
-
     int           TInt     = 32;        // 16bits to 32bits
     int16_t       T16Int   = 16;        // 16bits                from -128 to 127   treated as char
     uint16_t      TU16Int  = 16;        // 16bits                from 0 to 255      treated as char
@@ -128,16 +133,15 @@ int main()
 
     auto          TAuto    = "anything";// automatically determines the data type
 
-/*
-    get size of variable type :
+
+    // get size of variable type :
         cout<<sizeof(DataType) // return Byte
         cout<<sizeof(VariableName) // return Byte
-*/
 
-/*
-    get type of variable :
+
+    // get type of variable :
         cout<<typeid(VariableName).name() // return VariableType initial letter
-*/
+
 
     // Initializing :
         int initialize;         // default initialization (higher performance but higher risk of bugss)
@@ -168,6 +172,7 @@ int main()
             But const doesn’t guarantee that value is compile-time constant; it can be runtime constant.
         */
 
+        
     // OverFlow :
         unsigned short int a = 65535;
         unsigned short int b = 65536;
@@ -179,8 +184,8 @@ int main()
         // for every overflow, it restarts from zero by the same amount (OverFlow NeonLearn S4 T1:03:37)
 
 
-/*
-    type conversions :
+    /*
+        // type conversions :
 	        implicit : auto converts : like function get double but we get integer so compiler convert integer to double and use value
             
             explicit : manual converts : convert with static_cast<DataType>(VariableName OR VariableValue) syntaxt
@@ -189,7 +194,7 @@ int main()
                 std::cout<<x<<'\n';
                 auto x2 = static_cast<int>(x);
                 std::cout<<x2;
-*/
+    */
 
     
     // Literals :
@@ -201,7 +206,8 @@ int main()
         //                                                                 |                      |
         //                           using namespace std::Literals;     <--+----------------------+
 
-        
     return 0;
 }
-//MadMad_
+//--------------------------------------------------------------------------------------------------------------
+
+//MadMad_213
