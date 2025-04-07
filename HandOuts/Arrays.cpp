@@ -40,9 +40,9 @@
 			{
 				for(int j=0; j<3; j++)
 				{
-					cout<<MultArrayName[i][j]<<"   ";
+					std::cout<<MultArrayName[i][j]<<"   ";
 				}
-				cout<<"\n\n";
+				std::cout<<"\n\n";
 			}
 
 		// a better example :
@@ -51,11 +51,11 @@
 				for(int j=0; j<3; j++)
 				{
 					if( (i==0 && j==2) || (i==1 && j==2) )
-						cout<<ArrayName[i][j];
+						std::cout<<MultArrayName2[i][j];
 					else
-						cout<<ArrayName[i][j]<<",   ";
+						std::cout<<MultArrayName2[i][j]<<",   ";
 				}
-				cout<<"\n\n";
+				std::cout<<"\n\n";
 			}
 //--------------------------------------------------------------------------------------------------------------		
 

@@ -47,6 +47,31 @@
 
     ------------------------------------------------------------------------------------------------------------
 
+    collision2 :
+        Description : when we have two or more definitions in our projects
+        Example : 
+                    one file has a DoSomething() function that adds two numbers, and another file
+                    has a DoSomething() that subtracts them. In main file, when we call DoSomething, 
+                    it doesn't know which one to run.
+        
+        Solutions :
+                    1- change name of functions --> it takes a lot of time and might cause bugs
+                    2- user defined namespace
+                        initialize :
+                            namespace name
+                            {
+                                functions...
+                            }
+                        usage :
+                            name::function();
+                            OR
+                            using namespace name;
+                            function();
+                        tip :
+                            if ::function(); --> it directly goes to global namespace to find function
+                            if function();   --> it goes up step by step through namespaces until it reaches the function
+    ------------------------------------------------------------------------------------------------------------
+
     Name? :
         Example :
                     double d1{1};
