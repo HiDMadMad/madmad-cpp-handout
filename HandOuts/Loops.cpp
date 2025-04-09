@@ -5,7 +5,7 @@
 
 //--------------------------------------------------------------------------------------------------------------
 /*
-    // While: commands run while condition is true
+    // While : commands run while condition is true
                             ||    initializer;
         while(condition)    ||    while(condition)
         {                   OR    {
@@ -17,7 +17,7 @@
 
 //--------------------------------------------------------------------------------------------------------------
 /*
-    //For: commands run while condition is true
+    // For : commands run while condition is true
         for(initializer; condition; initializer+=num)
         {
             Commands;
@@ -35,4 +35,14 @@
 */
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_38
+//--------------------------------------------------------------------------------------------------------------
+/*
+    // Continue : skips the current iteration and goes back to the loop condition
+        continue;
+    
+    // Break : the program exits from the loop
+        break;
+*/
+//--------------------------------------------------------------------------------------------------------------
+
+//MadMad_48

@@ -1,6 +1,7 @@
 #include <iostream>
 
-//using namespace std;  // باعث تداخل اسامی در گلوبال نیم اسپیس میشود. درواقع دفنیشن های استاندارد لایبرری رو وارد گلوبال اسکوپ میکند
+using namespace std;    // It causes name conflicts in the global namespace, It effectively 
+//                         brings the standard library definitions into the global scope
 
 
 /// Types of bugs :
@@ -40,7 +41,7 @@
 
                         return 0;
                     }
-                    // if we write using namesapce std, we get a bug for function
+                    // if we write using namespace std, we get a bug for function
         Sings :
                 - linker error(in multi files)
                 - compiler error(in one file)
@@ -72,7 +73,7 @@
                             if function();   --> it goes up step by step through namespaces until it reaches the function
     ------------------------------------------------------------------------------------------------------------
 
-    Name? :
+    Floating-Point Precision Error :
         Example :
                     double d1{1};
                     double d2{0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1}
@@ -80,7 +81,7 @@
 
     ------------------------------------------------------------------------------------------------------------
 
-    Name? :
+    IEEE 754 Special Values(NaN) :
         Description : if compiler use IEEE754
         Example :
                     double zero {0};
@@ -94,4 +95,4 @@
 */
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_72
+//MadMad_98

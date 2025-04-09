@@ -35,6 +35,8 @@
 		// MultArrayName[0][1] --> 2
 		// also we can change the value
 
+		// tip : second size must be initialized
+
 		// example :						
 			for(int i=0; i<2; i++)
 			{
@@ -59,4 +61,4 @@
 			}
 //--------------------------------------------------------------------------------------------------------------		
 
-//MadMad_62
+//MadMad_64
