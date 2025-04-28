@@ -60,5 +60,14 @@
 				std::cout<<"\n\n";
 			}
 //--------------------------------------------------------------------------------------------------------------		
+	// Dynamic Array :
+			float *DynArrayName;
+			int DynArraySize;
+			// getting array size
+			DynArrayName = new float[DynArraySize];
+			// after that DynArrayName is like a array
+			// if in there, DynArrayName value is changed, we lost it and we can't delete it and memory leak is coming..
+			delete[] DynArrayName;
+//--------------------------------------------------------------------------------------------------------------
 
-//MadMad_64
+//MadMad_73

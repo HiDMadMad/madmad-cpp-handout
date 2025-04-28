@@ -260,7 +260,7 @@
 
 
     in real
-       "&" is "AddressOf" operator and returns "Address of Variable"
+       "&" is "Address-Of Or Reference-Of " operator and returns "Address of Variable"
     and
        "*" is "Dereference" operator and returns "Dereference of Address" or "value is in that address"
 */
@@ -270,19 +270,29 @@
 //  Pointer : pointer is a variable that holds the memory address of a variable of it's type
 
         int *APointer;  // holds address of APointer variable which is an int
+
+        // Tip :
+            int *ptr1, *ptr2; 
+            ptr1 = ptr2; //-->  هرجا یک اشاره کنه دو هم اشاره میکنه
+
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
 //  static and heap memory :
-
         // full caption is in GPT on madmadpv gmail.
+        // some of that is in "Arrays.cpp" file.
+        int *NewPtr, ANum=10;
+        NewPtr = &ANum;
+        // --> *NewPtr == 10;
+        NewPtr = new int;     // or ?
+        *NewPtr = 11;
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
 //  Arrays Pointers :
 
         int ArrayName[6];
-        int *ptr;
+        int *ptr=0; // or NULL
 
         ptr = ArrayName;        // first index (0)
         *ptr = 0;
@@ -303,4 +313,62 @@
         *(ptr+5) = 5;           // nth index (0 -> 5)
 //--------------------------------------------------------------------------------------------------------------
 
-// MadMad_306
+//--------------------------------------------------------------------------------------------------------------
+//  character pointer :
+        char CharOfChars[] {"hell"};
+        char *PtrToChar = CharOfChars;
+        int i = 0;
+        while(PtrToChar[i]!='\0')
+        {
+            std::cout<<PtrToChar[i];
+            i++;
+        }
+//--------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------
+//  Returning multiple variables from a function :
+        // using pointers :
+            void ModifyPersonInfo(int *age, double *hight)
+            {
+                (*age)++;
+                (*hight) += 0.5;
+            }
+            // in main :
+                int PersonAge{18};
+                double PersonHight{1.7};
+                std::cout<<"before : "<<PersonAge<<'\t'<<PersonHight<<'\n';
+                ModifyPersonInfo(&PersonAge, &PersonHight);
+                std::cout<<"after : "<<PersonAge<<'\t'<<PersonHight<<'\n';
+
+        // using references :
+            void ModifyWeatherInfo(int &temperature, double &pressure)
+            {
+                temperature += 3;
+                pressure -= 2.25;
+            }
+            // in main :
+                int WeatherTemp{24};
+                double WeatherPress{19.5};
+                std::cout<<"before : "<<WeatherTemp<<'\t'<<WeatherPress<<'\n';
+                ModifyWeatherInfo(WeatherTemp, WeatherPress);
+                std::cout<<"after : "<<WeatherTemp<<'\t'<<WeatherPress<<'\n';
+
+        // using struct :
+            struct Student
+            {
+                int age;
+                double grade;
+            };
+            void ModifyStudentInfo(Student &AStudent)
+            {
+                AStudent.age++;
+                AStudent.grade += 0.25;
+            }
+            // in main
+                Student student1 = {18, 15.6};
+                std::cout<<"before : "<<student1.age<<'\t'<<student1.grade<<'\n';
+                ModifyStudentInfo(student1);
+                std::cout<<"before : "<<student1.age<<'\t'<<student1.grade<<'\n';
+//--------------------------------------------------------------------------------------------------------------
+
+// MadMad_374

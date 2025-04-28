@@ -59,10 +59,14 @@ int main()
     wchar_t       TWChar   = '8';        // 8bits
         char ch = 'a';
         char chh {97}; // asci code for a
+        char chhh[]{"hello world"};
+        char chhhh[10];
         cout<<chh<<NL;
         // just for one character
         // escape sequances are characters ('\n', '\t', ...)
-
+        cin.get(ch);
+        cin.getline(chhhh, 10); // 10 is size of chhhh variable
+        
 
     string        TString  = "8";        // 1bit per character  and  it creates copy  and  needs to include string
     // const char[NumberOfCharacters];
@@ -210,4 +214,4 @@ int main()
 }
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_213
+//MadMad_217
