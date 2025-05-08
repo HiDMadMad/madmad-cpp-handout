@@ -267,7 +267,7 @@
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
-//  Pointer : pointer is a variable that holds the memory address of a variable of it's type
+    // Pointer : pointer is a variable that holds the memory address of a variable of it's type
 
         int *APointer;  // holds address of APointer variable which is an int
 
@@ -278,7 +278,7 @@
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
-//  static and heap memory :
+    // static and heap memory :
         // full caption is in GPT on madmadpv gmail.
         // some of that is in "Arrays.cpp" file.
         int *NewPtr, ANum=10;
@@ -289,7 +289,7 @@
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
-//  Arrays Pointers :
+    // Arrays Pointers :
 
         int ArrayName[6];
         int *ptr=0; // or NULL
@@ -314,7 +314,7 @@
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
-//  character pointer :
+    // character pointer :
         char CharOfChars[] {"hell"};
         char *PtrToChar = CharOfChars;
         int i = 0;
@@ -326,7 +326,7 @@
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
-//  Returning multiple variables from a function :
+    // Returning multiple variables from a function :
         // using pointers :
             void ModifyPersonInfo(int *age, double *hight)
             {
@@ -353,6 +353,10 @@
                 ModifyWeatherInfo(WeatherTemp, WeatherPress);
                 std::cout<<"after : "<<WeatherTemp<<'\t'<<WeatherPress<<'\n';
 
+        /// difference between pointer and reference :
+            // reference is simpler
+            // pointer can be null
+
         // using struct :
             struct Student
             {
@@ -371,4 +375,4 @@
                 std::cout<<"before : "<<student1.age<<'\t'<<student1.grade<<'\n';
 //--------------------------------------------------------------------------------------------------------------
 
-// MadMad_374
+// MadMad_378
