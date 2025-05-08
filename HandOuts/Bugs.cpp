@@ -21,7 +21,6 @@ using namespace std;    // It causes name conflicts in the global namespace, It 
                     - program runs in some IDEs and fails in others
                     - program crashes
                     ...
-
     ------------------------------------------------------------------------------------------------------------
 
     collision :
@@ -45,7 +44,6 @@ using namespace std;    // It causes name conflicts in the global namespace, It 
         Sings :
                 - linker error(in multi files)
                 - compiler error(in one file)
-
     ------------------------------------------------------------------------------------------------------------
 
     collision2 :
@@ -78,7 +76,6 @@ using namespace std;    // It causes name conflicts in the global namespace, It 
                     double d1{1};
                     double d2{0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1}
                     // d1 != d2
-
     ------------------------------------------------------------------------------------------------------------
 
     IEEE 754 Special Values(NaN) :
@@ -90,9 +87,13 @@ using namespace std;    // It causes name conflicts in the global namespace, It 
                     NaN {zero / zero};
 
                     // return inf and -inf and nan
-    
     ------------------------------------------------------------------------------------------------------------
+
+    Garbage Collection :
+        Description : a process that automatically frees memory no longer needed to prevent memory leaks
+    ------------------------------------------------------------------------------------------------------------
+
 */
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_98
+//MadMad_99
