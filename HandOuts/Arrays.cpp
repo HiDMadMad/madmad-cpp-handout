@@ -47,22 +47,22 @@
 			}
 
 		// a cleaner example :
-		for(int i=0; i<2; i++)
-		{
-			for(int j=0; j<3; j++)
+			for(int i=0; i<2; i++)
 			{
-				std::cout<<MultArrayName2[i][j];
-				if(j<2)
-					std::cout<<",   ";  // ", "
+				for(int j=0; j<3; j++)
+				{
+					std::cout<<MultArrayName2[i][j];
+					if(j<2)
+						std::cout<<",   ";  // ", "
+				}
+				std::cout<<"\n\n"; // "\n"
 			}
-			std::cout<<"\n\n"; // "\n"
-		}
 //--------------------------------------------------------------------------------------------------------------		
 
 //--------------------------------------------------------------------------------------------------------------
 	// Dynamic Array :
 		float *DynArrayName;
-		int DynArraySize;
+		unsigned int DynArraySize;
 		// getting array size
 		DynArrayName = new float[DynArraySize];
 		// after that DynArrayName is like a array
