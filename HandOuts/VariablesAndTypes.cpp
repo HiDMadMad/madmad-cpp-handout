@@ -51,7 +51,7 @@ int main()
                 std::cin.get(ch1);           // takes only one character
                 std::cin.get(ch4, MAXIMUM);  // takes up to MAXIMUM characters(without '\n')
                 std::cin.getline(ch4, MAXIMUM);   // takes up to MAXIMUM characters(with '\n')
-                
+                                                  // (It takes up to CharSize-1, and the last CharSize == '\0')        
             // escape sequences are characters ('\n', '\t', ...)
             
         
