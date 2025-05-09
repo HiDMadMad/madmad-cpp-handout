@@ -22,7 +22,7 @@
 
 //--------------------------------------------------------------------------------------------------------------
 	// Multidimensional Array :
-		// Type ArrayName [ArraySize][ArraySize2][ArraySize3]... = { { { initialize } } };
+		// Type ArrayName [ArraySize][ArraySize2][ArraySize3]... = { { { initialize }, { initialize } } };
 		int MultArrayName[2][3] = { {1, 2, 3}, {4, 5, 6} };
 		// OR
 		int MultArrayName2[2][3] = {
@@ -46,18 +46,17 @@
 				std::cout<<"\n\n";
 			}
 
-		// a better example :
-			for(int i=0; i<2; i++)
+		// a cleaner example :
+		for(int i=0; i<2; i++)
+		{
+			for(int j=0; j<3; j++)
 			{
-				for(int j=0; j<3; j++)
-				{
-					if( (i==0 && j==2) || (i==1 && j==2) )
-						std::cout<<MultArrayName2[i][j];
-					else
-						std::cout<<MultArrayName2[i][j]<<",   ";
-				}
-				std::cout<<"\n\n";
+				std::cout<<MultArrayName2[i][j];
+				if(j<2)
+					std::cout<<",   ";  // ", "
 			}
+			std::cout<<"\n\n"; // "\n"
+		}
 //--------------------------------------------------------------------------------------------------------------		
 
 //--------------------------------------------------------------------------------------------------------------
@@ -71,4 +70,4 @@
 		delete[] DynArrayName;
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_74
+//MadMad_73

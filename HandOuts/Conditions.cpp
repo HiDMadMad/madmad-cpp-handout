@@ -27,11 +27,11 @@
         }
 
         // if command is one line dosn't matter if {} is write or not
-        // if condition is not boolian and is not 0, it is always true
+        // if condition is not boolean and is not 0, it is always true
 
         if variable is boolean :
             if(Variable)  OR  if(!Variable)
-                True              False
+                True      ||      False
 */
 //--------------------------------------------------------------------------------------------------------------
 
@@ -72,4 +72,31 @@
 */
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_75
+//--------------------------------------------------------------------------------------------------------------
+/*
+    // #if && #ifdef && #endif :
+        #ifdef MY_PASS
+            std::cout<<"if MY_PASS defined with #define, so thats will run";  // even defined in main() or any function
+            cout<<MY_PASS;
+        #endif
+        --------------------
+        #ifndef USER_NAME
+            std::cout<<"if USER_NAME undefined with #define, so thats will run";  // even defined in main() or any function
+            #define USER_NAME;
+        #endif
+        --------------------
+        #if 0
+            std::cout<<"never run"  // This code is disabled because #if 0 evaluates to false
+        #endif
+        --------------------
+        #ifdef _WIN32
+            std::cout<<"running on windows";
+        #elif __linux__
+            std::cout<<"running on linux";
+        #else
+            std::cout<<"running on mac";
+        #endif
+*/
+//--------------------------------------------------------------------------------------------------------------
+
+//MadMad_102

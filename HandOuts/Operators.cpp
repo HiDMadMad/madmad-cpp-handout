@@ -34,7 +34,7 @@
 
 //--------------------------------------------------------------------------------------------------------------
 /*
-    // percent sign(%) :
+    // modulus(%) :
         the result always between 0 and one less than the second number
         EX:
             x%y = one of 0,1,2,...,y-1 (it depends on the first number)
@@ -62,16 +62,17 @@
 //--------------------------------------------------------------------------------------------------------------
 /*
     // examples :
-        int a = 2;
-        int b(3);
-        int res = (a == b) ? a : b;  // if a==b then result=a, else result=b
-                                    // if condition then result1 else result2
+        int num1 = 2;
+        int num2 {3};
+
+        int ComparisonResult = (num1 == num2) ? num1 : num2; // if num1==num2 then result=num1, else result=num2
+                                                             // if condition then result1 else result2
         
-        int res2 = (a=4, a-1);   // a->4 then 4-1 then res2=answer
+        int UpdatedResult = (num1=4, num1-1);   // num1->4 then 4-1 then UpdatedResult=num1=3
         
-        int power = pow(a,b);
+        int PowerResult = pow(num1,num2);
 
 */
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_77
+//MadMad_78

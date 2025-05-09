@@ -259,7 +259,7 @@
         *x return value is inside of address
 
 
-    in real
+    basically
        "&" is "Address-Of Or Reference-Of " operator and returns "Address of Variable"
     and
        "*" is "Dereference" operator and returns "Dereference of Address" or "value is in that address"
@@ -273,7 +273,7 @@
 
         // Tip :
             int *ptr1, *ptr2; 
-            ptr1 = ptr2; //-->  هرجا یک اشاره کنه دو هم اشاره میکنه
+            ptr1 = ptr2; // --> ptr2 points to the same place as ptr1
 
 //--------------------------------------------------------------------------------------------------------------
 
@@ -289,7 +289,7 @@
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
-    // Arrays Pointers :
+    // browsing an array using a pointer :
 
         int ArrayName[6];
         int *ptr=0; // or NULL
@@ -353,11 +353,11 @@
                 ModifyWeatherInfo(WeatherTemp, WeatherPress);
                 std::cout<<"after : "<<WeatherTemp<<'\t'<<WeatherPress<<'\n';
 
-        /// difference between pointer and reference :
+        /// difference between pointer and reference in function parameters :
             // reference is simpler
             // pointer can be null
 
-        // using struct :
+        // using structure :
             struct Student
             {
                 int age;

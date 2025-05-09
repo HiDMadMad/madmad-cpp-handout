@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-int LenOfWord(std::string str)
+unsigned int LenOfWord(std::string str)
 {
     int Cnt{0}, CharsCnt{0};
     while(str[Cnt]!='\0')

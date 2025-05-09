@@ -12,6 +12,7 @@
             Commands;       ||        Commands;
         }                   ||        initializer+=num
                             ||    }
+    // tip : better when we want to repeat until a condition is true or we don't know how many times
 */
 //--------------------------------------------------------------------------------------------------------------
 
@@ -22,12 +23,13 @@
         {
             Commands;
         }
+    // tip : better when we know how many times to repeat
 */
 //--------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------
 /*
-    // Do While: commands run at least once even condition is false
+    // Do While: commands run at least once even if the condition is false
         Do
         {
             Commands;
@@ -45,4 +47,4 @@
 */
 //--------------------------------------------------------------------------------------------------------------
 
-//MadMad_48
+//MadMad_50
