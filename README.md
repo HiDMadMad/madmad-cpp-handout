@@ -2,7 +2,7 @@
 
 This repo is where I share what I learn about C++. If you're learning too, feel free to check it out! 🚀
 
-![C++](https://img.shields.io/badge/C%2B%2B-Learning-blue?style=for-the-badge&logo=c%2B%2B)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)  
 
 ---
 
