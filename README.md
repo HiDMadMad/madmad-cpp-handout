@@ -8,7 +8,7 @@ This repo is where I share what I learn about C++. If you're learning too, feel 
 
 ## 📚 Learning Resources
 
-- [c++ quick cheatsheet](https://quickref.me/cpp)
+- [c++ quick cheatsheet](https://quickref.me/cpp) - A complete and comprehensive summary.
 - [C++ Reference](https://cplusplus.com/) - Documentation and tutorials.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/) - Great explanations and examples.
 - [NeonLearn Course](https://youtube.com/playlist?list=PLTEzTFAAzxQ5iUo9xD-5HlM-stLDyidpg&si=lbYlPdJuJrHDh2GS) - Covers everything with deep insights.
